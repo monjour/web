@@ -2,7 +2,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import Button from "./Button";
 
 const Logo = () => {
   //update the size of the logo when the size of the screen changes
@@ -37,7 +36,7 @@ const Logo = () => {
     <>
       <Link href="/" style={{ display: showButton ? "none" : "block" }}>
         <Image
-          src="/transparente.png"
+          src="/monjour-logo-header.png"
           alt="Logo"
           width={width < 1024 ? "150" : "150"}
           height={width < 1024 ? "46" : "46"}
@@ -49,7 +48,6 @@ const Logo = () => {
           display: showButton ? "block" : "none",
         }}
       >
-        <Button />
       </div>
     </>
   );
