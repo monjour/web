@@ -38,8 +38,8 @@ const Logo = () => {
         <Image
           src="/monjour-logo-header.png"
           alt="Logo"
-          width={width < 1024 ? "150" : "150"}
-          height={width < 1024 ? "46" : "46"}
+          width="150"
+          height="46"
           className="relative"
         />
       </Link>

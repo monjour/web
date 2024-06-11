@@ -1,23 +1,40 @@
 import React from "react";
+import { useEffect, useState } from "react";
+
 import Link from "next/link";
 import Logo from "./Logo";
 import { IconInstagram, IconWhatsapp, IconEmail } from "./icons";
 import Image from "next/image";
 
 const Navbar = ({ toggle }: { toggle: () => void }) => {
+  //update the size of the logo when the size of the screen changes
+  const [width, setWidth] = useState(0);
+
+  const updateWidth = () => {
+    const newWidth = window.innerWidth;
+    setWidth(newWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateWidth);
+    updateWidth();
+  }, []);
+
   return (
-    <div className="w-full h-40 bg-white sticky top-0">
+    <div className="w-full bg-white sticky top-0">
       <div className="container mx-auto px-4 h-full">
-        <div className=" items-center h-20">
-        <Image className="mx-auto"
-        src="/monjour-logo-header.png"
-        width="250"
-        height="20"
-        alt="Logo de monjour."
-      />
+        <div className=" hidden md:flex items-center h-20">
+          <Image
+            className="mx-auto hidden md:flex"
+            src="/monjour-logo-header.png"
+            width={width < 1024 ? "0" : "250"}
+            height={width < 1024 ? "0" : "20"}
+            alt="Logo de monjour."
+          />
         </div>
         <div className="flex justify-between items-center h-20">
-          <Logo />
+          <div className="flex md:hidden"> <Logo /></div>
+          
           <button
             type="button"
             className="inline-flex items-center md:hidden"
@@ -35,7 +52,7 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
               />
             </svg>
           </button>
-          <ul className="hidden md:flex gap-x-6 text-white ">
+          <ul className="hidden md:flex mx-auto gap-x-6 text-white ">
             <li>
               <Link href="/about">
                 <p className="font-alice text-mj-purple text-mj-purple">
