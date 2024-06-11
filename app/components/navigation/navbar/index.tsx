@@ -2,13 +2,19 @@ import React from "react";
 import Link from "next/link";
 import Logo from "./Logo";
 import { IconInstagram, IconWhatsapp, IconEmail } from "./icons";
+import Image from "next/image";
 
 const Navbar = ({ toggle }: { toggle: () => void }) => {
   return (
     <div className="w-full h-40 bg-white sticky top-0">
       <div className="container mx-auto px-4 h-full">
-        <div className="flex justify-between items-center h-20">
-          <Logo />
+        <div className=" items-center h-20">
+        <Image className="mx-auto"
+        src="/monjour-logo-header.png"
+        width="250"
+        height="20"
+        alt="Logo de monjour."
+      />
         </div>
         <div className="flex justify-between items-center h-20">
           <Logo />
@@ -59,13 +65,13 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
             </li>
           </ul>
           <div className="hidden md:block">
-            <button>
+            <button className=" px-2">
               <IconWhatsapp />
             </button>
-            <button>
+            <button className=" px-2">
               <IconInstagram />
             </button>
-            <button>
+            <button className=" px-2 ">
               <IconEmail />
             </button>
           </div>
