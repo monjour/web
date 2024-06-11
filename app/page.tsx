@@ -10,6 +10,7 @@ export default function Home() {
         sizes="100vw"
         style={{ width: "100%", height: "auto" }} // optional
         alt="Foto de unos novios saluando hacia atrás mientras se van en un coche."
+        
       />
     </main>
   );
