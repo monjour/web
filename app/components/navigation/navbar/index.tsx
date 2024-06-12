@@ -21,12 +21,11 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
   return (
     <div className="w-full bg-white sticky top-0">
       <div className="container mx-auto px-4 h-full">
-        <div className=" hidden md:flex items-center h-20">
+        <div className=" hidden md:flex items-center h-60">
           <img // eslint-disable-line @next/next/no-img-element
             className="mx-auto hidden md:flex"
             src="/monjour-logo-header.png"
-            width={width < 1024 ? "0" : "250"}
-            height={width < 1024 ? "0" : "20"}
+            width={width < 1024 ? "0" : "500"}
             alt="Logo de monjour."
           />
         </div>
@@ -53,7 +52,7 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
               />
             </svg>
           </button>
-          <ul className="hidden md:flex mx-auto gap-x-6 text-white ">
+          <ul className="hidden md:flex mx-auto gap-x-12 text-white text-2xl ">
             <li>
               <Link href="/about">
                 <p className="font-alice text-mj-purple text-mj-purple">
