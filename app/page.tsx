@@ -1,7 +1,7 @@
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between  bg-mj-purple2">
+    <main className="flex min-h-screen flex-col items-center justify-between  bg-mj-purple">
       <img // eslint-disable-line @next/next/no-img-element
         src="/landing-photo.jpg"
         width={0}
