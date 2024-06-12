@@ -32,18 +32,28 @@ const Sidebar = ({
 
       <ul className="sidebar-nav text-center leading-relaxed text-xl">
         <li>
-          <Link href="/about" onClick={toggle}>
-            <p>About Us</p>
+          <Link href="/about">
+            <p className="font-alice text-mj-purple text-mj-purple">MONJOUR</p>
           </Link>
         </li>
         <li>
-          <Link href="/services" onClick={toggle}>
-            <p>Services</p>
+          <Link href="/services">
+            <p className="font-alice text-mj-purple">QUIENES SOMOS</p>
           </Link>
         </li>
         <li>
-          <Link href="/contacts" onClick={toggle}>
-            <p>Contacts</p>
+          <Link href="/contacts">
+            <p className="font-alice text-mj-purple">SERVICIOS</p>
+          </Link>
+        </li>
+        <li>
+          <Link href="/contacts">
+            <p className="font-alice text-mj-purple">CONTACTO</p>
+          </Link>
+        </li>
+        <li>
+          <Link href="/contacts">
+            <p className="font-alice text-mj-purple">ESPACIOS</p>
           </Link>
         </li>
       </ul>

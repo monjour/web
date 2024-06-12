@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Logo from "./Logo";
 import { IconInstagram, IconWhatsapp, IconEmail } from "./icons";
-import Image from "next/image";
+
 
 const Navbar = ({ toggle }: { toggle: () => void }) => {
   //update the size of the logo when the size of the screen changes
@@ -24,7 +24,7 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
     <div className="w-full bg-white sticky top-0">
       <div className="container mx-auto px-4 h-full">
         <div className=" hidden md:flex items-center h-20">
-          <Image
+          <img
             className="mx-auto hidden md:flex"
             src="/monjour-logo-header.png"
             width={width < 1024 ? "0" : "250"}
