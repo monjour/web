@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { IconInstagram, IconWhatsapp, IconEmail } from "../icons";
 
 const Sidebar = ({
   isOpen,
@@ -57,6 +58,18 @@ const Sidebar = ({
           </Link>
         </li>
       </ul>
+      <div className="flex">
+            <a className=" px-2" href="https://wa.link/jj6zna">
+              <IconWhatsapp />
+            </a>
+            <a className=" px-2" href="https://www.instagram.com/monjour.eventos">
+              <IconInstagram />
+            </a>
+            <a className=" px-2 " href="mailto:sandra@monjour.es">
+              <IconEmail />
+            </a>
+          </div>
+
     </div>
   );
 };

@@ -8,7 +8,7 @@ export default function Home() {
         height={0}
         sizes="100vw"
         style={{ width: "100%", height: "auto" }} 
-        alt="Foto de unos novios saluando hacia atrás mientras se van en un coche."
+        alt="Foto de unos novios saludando hacia atrás mientras se van en un coche."
       />
     </main>
   );

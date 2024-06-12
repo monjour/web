@@ -20,7 +20,7 @@ const Logo = () => {
   return (
     <>
       <Link href="/" style={{ display: showButton ? "none" : "block" }}>
-        <img
+        <img // eslint-disable-line @next/next/no-img-element
           src="/monjour-logo-header.png"
           alt="Logo"
           width="150"

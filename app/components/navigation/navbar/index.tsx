@@ -1,10 +1,8 @@
-import React from "react";
 import { useEffect, useState } from "react";
 
 import Link from "next/link";
 import Logo from "./Logo";
-import { IconInstagram, IconWhatsapp, IconEmail } from "./icons";
-
+import { IconInstagram, IconWhatsapp, IconEmail } from "../icons";
 
 const Navbar = ({ toggle }: { toggle: () => void }) => {
   //update the size of the logo when the size of the screen changes
@@ -24,7 +22,7 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
     <div className="w-full bg-white sticky top-0">
       <div className="container mx-auto px-4 h-full">
         <div className=" hidden md:flex items-center h-20">
-          <img
+          <img // eslint-disable-line @next/next/no-img-element
             className="mx-auto hidden md:flex"
             src="/monjour-logo-header.png"
             width={width < 1024 ? "0" : "250"}
@@ -33,8 +31,11 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
           />
         </div>
         <div className="flex justify-between items-center h-20">
-          <div className="flex md:hidden"> <Logo /></div>
-          
+          <div className="flex md:hidden">
+            {" "}
+            <Logo />
+          </div>
+
           <button
             type="button"
             className="inline-flex items-center md:hidden"
@@ -81,16 +82,16 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
               </Link>
             </li>
           </ul>
-          <div className="hidden md:block">
-            <button className=" px-2">
+          <div className="hidden md:flex">
+            <a className=" px-2" href="https://wa.link/jj6zna">
               <IconWhatsapp />
-            </button>
-            <button className=" px-2">
+            </a>
+            <a className=" px-2" href="https://www.instagram.com/monjour.eventos">
               <IconInstagram />
-            </button>
-            <button className=" px-2 ">
+            </a>
+            <a className=" px-2 " href="mailto:sandra@monjour.es">
               <IconEmail />
-            </button>
+            </a>
           </div>
         </div>
       </div>
