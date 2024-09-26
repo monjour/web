@@ -21,7 +21,7 @@ const Logo = () => {
     <>
       <Link href="/" style={{ display: showButton ? "none" : "block" }}>
         <img // eslint-disable-line @next/next/no-img-element
-          src="/monjour-logo-header.png"
+          src="/monjour-logo-header470.png"
           alt="Logo"
           width="150"
           height="46"
@@ -32,8 +32,7 @@ const Logo = () => {
         style={{
           display: showButton ? "block" : "none",
         }}
-      >
-      </div>
+      ></div>
     </>
   );
 };

@@ -38,6 +38,8 @@ const config: Config = {
       },
       fontFamily: {
         alice: ["Alice"],
+        gvibes: ["Great Vibes"],
+
       },
     },
   },

@@ -21,10 +21,10 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
   return (
     <div className="w-full bg-white sticky top-0">
       <div className="container mx-auto px-4 h-full">
-        <div className=" hidden md:flex items-center h-60">
+        <div className=" hidden md:flex items-center h-30">
           <img // eslint-disable-line @next/next/no-img-element
             className="mx-auto hidden md:flex"
-            src="/monjour-logo-header.png"
+            src="/monjour-logo-header470.png"
             width={width < 1024 ? "0" : "500"}
             alt="Logo de monjour."
           />
@@ -35,29 +35,15 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
             <Logo />
           </div>
 
-          <button
-            type="button"
-            className="inline-flex items-center md:hidden"
-            onClick={toggle}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="40"
-              height="40"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="#817886"
-                d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"
-              />
+          <button type="button" className="inline-flex items-center md:hidden" onClick={toggle}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+              <path fill="#817886" d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z" />
             </svg>
           </button>
           <ul className="hidden md:flex mx-auto gap-x-12 text-white text-2xl ">
             <li>
               <Link href="/about">
-                <p className="font-alice text-mj-purple text-mj-purple">
-                  MONJOUR
-                </p>
+                <p className="font-alice text-mj-purple">MONJOUR</p>
               </Link>
             </li>
             <li>
